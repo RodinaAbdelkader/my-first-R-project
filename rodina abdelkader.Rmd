@@ -1,4 +1,44 @@
 ---
-title: "rodina abdelkader"
+title: "Assignment 1 - Hello R"
+author: "Rodina Abdelkader"
 output: html_document
 ---
+{r}
+## Simple Calculations in R
+```{r}
+# Assign values
+a <- 5
+b <- 2
+```
+```{r}
+# Perform operations
+r1 <- a + b
+r2 <- a - b
+r3 <- a * b
+r4 <- a / b
+```
+```{r}
+# Create vector
+v1 <- c(r1, r2, r3, r4)
+```
+```{r}
+# Add power operation (a^b)
+v1 <- c(v1, a^b)
+```
+```{r}
+# Create labels for operations
+v2 <- c("sum", "difference", "product", "ratio", "power")
+
+```
+```{r}
+# Combine into data frame
+df <- data.frame(Results = v1, Operation = v2)
+```
+```{r}
+# Show full data frame
+df
+```
+```{r}
+# Show one specific entry (row 2, column 1)
+df[2,1]
+```
