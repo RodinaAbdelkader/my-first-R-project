@@ -1,0 +1,86 @@
+---
+title: "assignment 2"
+author: "Rodina Abdelkader"
+date: "2025-11-04"
+output: html_document
+---
+```{r}
+n <- 4
+if (n > 3) {
+  print("larger")
+} else {
+  print("equal or smaller")
+}
+```
+```{r}
+n <- 3
+if (n > 3) {
+  print("larger")
+} else if (n == 3) {
+  print("equal")
+} else {
+  print("smaller")
+}
+```
+```{r}
+n <- 5
+if (n %% 2 == 0) {
+  print("even")
+} else {
+  print("odd")
+}
+```
+```{r}
+for (n in c(2, 3, 4)) {
+  if (n > 3) {
+    print("larger")
+  } else if (n == 3) {
+    print("equal")
+  } else {
+    print("smaller")
+  }
+}
+```
+```{r}
+results <- c()
+for (n in c(2, 3, 4)) {
+  if (n > 3) {
+    results <- c(results, "larger")
+  } else if (n == 3) {
+    results <- c(results, "equal")
+  } else {
+    results <- c(results, "smaller")
+  } 
+}  
+print(results)    
+```
+```{r}
+results_list <- list()
+for (n in c(2, 3, 4)) {
+  if (n > 3) {
+    results_list[[length(results_list)+1]] <- "larger"
+  } else if (n == 3) {
+    results_list[[length(results_list)+1]] <- "equal"
+  } else {
+    results_list[[length(results_list)+1]] <- "smaller"
+  }
+}
+print(results_list)
+```
+```{r}
+results_lapply <- lapply(c(2,3,4), function(n){
+  if (n > 3) {
+    return("larger")
+  } else if (n == 3) {
+    return("equal")
+  } else {
+    return("smaller")
+  }
+})
+print(results_lapply)
+```
+```{r}
+print(unlist(results_lapply))
+```
+
+
